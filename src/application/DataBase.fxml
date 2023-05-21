@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="BPADd" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="853.0" style="-fx-background-radius: 25;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControlBD">
+   <top>
+      <AnchorPane prefHeight="109.0" prefWidth="849.0" style="-fx-background-color: #D7EACE;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="D1" alignment="CENTER" contentDisplay="CENTER" layoutX="156.0" layoutY="3.0" prefHeight="107.0" prefWidth="635.0" text="Afficher Les Données" textFill="#2f7355">
+               <font>
+                  <Font name="Tw Cen MT Condensed Extra Bold" size="47.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="89.0" fitWidth="117.0" layoutX="137.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/icons8_database_administrator_100px.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="exit" layoutX="789.0" layoutY="3.0" mnemonicParsing="false" onMouseClicked="#close" prefHeight="60.0" prefWidth="64.0">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="56.0">
+                     <image>
+                        <Image url="@../Images/icons8_Close_160px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+      
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="491.0" prefWidth="841.0" style="-fx-background-color: #EFF6E6;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="AffEnca" layoutX="57.0" layoutY="26.0" mnemonicParsing="false" onAction="#Encad" prefHeight="69.0" prefWidth="300.0" style="-fx-background-color: #E6EDB7; -fx-background-radius: 25;" text="Afficher Les Encadrants" textFill="#2f7355">
+               <font>
+                  <Font name="Tw Cen MT Condensed Extra Bold" size="22.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="47.0" fitWidth="46.0">
+                     <image>
+                        <Image url="@../Images/icons8_administrator_male_500px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="AffStag" layoutX="497.0" layoutY="23.0" mnemonicParsing="false" onAction="#stag" prefHeight="75.0" prefWidth="305.0" style="-fx-background-color: #E6EDB7; -fx-background-radius: 25;" text="Afficher Les Stagiaires" textFill="#2f7355">
+               <font>
+                  <Font name="Tw Cen MT Condensed Extra Bold" size="22.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="28.0">
+                     <image>
+                        <Image url="@../Images/icons8_students_80px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="AffPlac" layoutX="427.0" layoutY="105.0" mnemonicParsing="false" onAction="#place" prefHeight="69.0" prefWidth="254.0" style="-fx-background-color: #E6EDB7; -fx-background-radius: 25;" text="Afficher Les Places" textFill="#2f7355">
+               <font>
+                  <Font name="Tw Cen MT Condensed Extra Bold" size="22.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="33.0">
+                     <image>
+                        <Image url="@../Images/icons8_spectators_on_seats_48px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TableView fx:id="TABLE" layoutY="187.0" prefHeight="274.0" prefWidth="853.0" visible="false">
+              <columns>
+                <TableColumn fx:id="ID" prefWidth="59.0" text="ID" />
+                <TableColumn fx:id="PrenomEn" prefWidth="143.0" text="PrenomEn" />
+                  <TableColumn fx:id="NomEn" prefWidth="144.0" text="NomEn" />
+                  <TableColumn fx:id="EmailEn" prefWidth="183.0" text="EmailEn" />
+                  <TableColumn fx:id="NumEn" prefWidth="187.0" text="TelephoneEn" />
+                  <TableColumn fx:id="Domaine" minWidth="0.0" prefWidth="134.0" text="Domaine" />
+              </columns>
+            </TableView>
+            <TableView fx:id="TABLE2" layoutX="14.0" layoutY="201.0" prefHeight="297.0" prefWidth="853.0" visible="false">
+              <columns>
+                <TableColumn fx:id="iD" prefWidth="28.0" text="ID" />
+                <TableColumn fx:id="PrenST" prefWidth="94.0" text="PrenST" />
+                  <TableColumn fx:id="NomST" prefWidth="62.0" text="NomST" />
+                  <TableColumn fx:id="TelephoneST" prefWidth="114.0" text="TelephoneST" />
+                  <TableColumn fx:id="EmailST" prefWidth="62.0" text="EmailST" />
+                  <TableColumn fx:id="DiplomeST" prefWidth="115.0" text="DiplomeST" />
+                  <TableColumn fx:id="Date_Debut" prefWidth="93.0" text="Date_Debut" />
+                  <TableColumn fx:id="Date_Fin" prefWidth="103.0" text="Date_Fin" />
+                  <TableColumn fx:id="ServiceST" prefWidth="88.0" text="ServiceST" />
+                  <TableColumn fx:id="Encadrant" prefWidth="87.0" text="Encadrant" />
+              </columns>
+            </TableView>
+            <TableView fx:id="TABLE3" layoutX="6.0" layoutY="189.0" prefHeight="272.0" prefWidth="844.0" visible="false">
+              <columns>
+                <TableColumn fx:id="Id" prefWidth="105.0" text="ID" />
+                <TableColumn fx:id="Nom_Domaine" prefWidth="184.0" text="Nom_Domaine" />
+                  <TableColumn fx:id="Places_Vides" prefWidth="181.0" text="Places_Vides" />
+                  <TableColumn fx:id="Encadrants" prefWidth="165.0" text="Encadrants" />
+                  <TableColumn fx:id="Places_Generales" prefWidth="200.0" text="Places_Generales" />
+              </columns>
+            </TableView>
+            <Button fx:id="ABs" layoutX="145.0" layoutY="105.0" mnemonicParsing="false" onAction="#Abst" prefHeight="69.0" prefWidth="254.0" style="-fx-background-color: #E6EDB7; -fx-background-radius: 25;" text="Affiche L'absence" textFill="#2f7355">
+               <font>
+                  <Font name="Tw Cen MT Condensed Extra Bold" size="22.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="33.0">
+                     <image>
+                        <Image url="@../Images/attendance_96px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TableView fx:id="TABLE4" layoutX="12.0" layoutY="195.0" prefHeight="272.0" prefWidth="842.0" visible="false">
+              <columns>
+                <TableColumn fx:id="idAB" prefWidth="48.0" text="Id" />
+                <TableColumn fx:id="DateAB" prefWidth="138.0" text="Date" />
+                  <TableColumn fx:id="StatusAB" minWidth="0.0" prefWidth="182.0" text="Status" />
+                  <TableColumn fx:id="Id_STAB" prefWidth="121.0" text="id_Stagiaires" />
+                  <TableColumn fx:id="NomAB" prefWidth="183.0" text="Nom" />
+                  <TableColumn fx:id="PrenomAB" prefWidth="161.0" text="Prenom" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+   </center>
+</BorderPane>
